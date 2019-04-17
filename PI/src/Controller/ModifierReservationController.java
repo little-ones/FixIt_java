@@ -6,6 +6,7 @@
 package Controller;
 
 import Entity.Demande;
+import Entity.Pro;
 import Entity.Reservation;
 import Service.DemandeS;
 import Service.ReservationS;
@@ -79,8 +80,9 @@ public class ModifierReservationController implements Initializable{
             handyman.setImage(image);
             Reservation r = new Reservation();
             r = ReservationS.getInstance().show(id);
+            Pro p = DemandeS.getInstance().showpro(r.getIdpro());
             System.err.println(r.toString()+"<-----------------------------");
-            prof.setText(r.getIdpro()+"");
+            prof.setText(p.getNom()+"");
             titreoffre.setText(r.getCategorie());
             datedebut.setValue(r.getDatedebut().toLocalDate());
             datefin.setValue(r.getDatefin().toLocalDate());

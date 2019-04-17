@@ -31,9 +31,9 @@
                </image>
             </ImageView>
             <Separator layoutX="305.0" layoutY="43.0" orientation="VERTICAL" prefHeight="343.0" prefWidth="12.0" />
-            <JFXTextField fx:id="prof" layoutX="369.0" layoutY="50.0" prefHeight="29.0" prefWidth="346.0" promptText="Professionnel" />
-            <JFXTextField fx:id="titreoffre" layoutX="369.0" layoutY="111.0" prefHeight="29.0" prefWidth="346.0" promptText="Titre" />
-            <JFXTextField fx:id="budget" layoutX="369.0" layoutY="174.0" prefHeight="29.0" prefWidth="346.0" promptText="Budget" />
+            <JFXTextField fx:id="prof" editable="false" layoutX="369.0" layoutY="50.0" prefHeight="29.0" prefWidth="346.0" promptText="Professionnel" />
+            <JFXTextField fx:id="titreoffre" editable="false" layoutX="369.0" layoutY="111.0" prefHeight="29.0" prefWidth="346.0" promptText="Titre" />
+            <JFXTextField fx:id="budget" editable="false" layoutX="369.0" layoutY="174.0" prefHeight="29.0" prefWidth="346.0" promptText="Budget" />
             <JFXDatePicker fx:id="datedebut" layoutX="369.0" layoutY="250.0" prefHeight="29.0" prefWidth="346.0" promptText="Date Début" />
             <JFXDatePicker fx:id="datefin" layoutX="371.0" layoutY="295.0" prefHeight="29.0" prefWidth="346.0" promptText="Date Fin" />
             <JFXButton fx:id="btnmodif" layoutX="411.0" layoutY="352.0" prefHeight="37.0" prefWidth="117.0" styleClass="blue-btn" stylesheets="@../Styles/styles.css" text="Modifier" />

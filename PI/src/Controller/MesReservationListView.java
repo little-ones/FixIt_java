@@ -81,7 +81,7 @@ public class MesReservationListView implements Initializable {
         Image icon = new Image(getClass().getResource("/Image/recherche.png").toExternalForm());
         searchicon.setImage(icon);
         Listreservation.setItems(reservationObservableList);
-        Listreservation.setCellFactory(reservationListView -> new MesreservationListViewCell());
+        Listreservation.setCellFactory(reservationListView -> new MesreservationListViewCell(this));
 
         servicelist.setItems(serviceObservableList);
         servicelist.setCellFactory(new Callback<ListView<Service>, ListCell<Service>>() {
@@ -117,6 +117,14 @@ public class MesReservationListView implements Initializable {
             Listreservation.setCellFactory(reservationListView -> new MesreservationListViewCell());
             Listreservation.refresh();
         }
+    }
+    public void loadDataReservation() {
+        reservationObservableList.clear();
+        reservationObservableList.addAll(ReservationS.getInstance().showAll());
+        Listreservation.setItems(reservationObservableList);
+        
+        Listreservation.setCellFactory(demandeListView -> new MesreservationListViewCell(this));
+        Listreservation.refresh();
     }
 
 }

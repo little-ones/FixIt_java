@@ -103,6 +103,8 @@ public class DemandeListViewCell extends ListCell<Demande> {
             btnsupprimerdemande.setOnAction((event) -> {
                 try {
                     DemandeS.getInstance().delete(demande.getId());
+                    this.controllerd.loadData();
+                    System.out.println("Demande bien supprimer");
 
                 } catch (Exception ex) {
                     System.out.println("Probleme de suppression d'une demande ");

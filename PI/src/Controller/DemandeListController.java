@@ -112,7 +112,7 @@ public class DemandeListController implements Initializable {
         demandeObservableList.clear();
         demandeObservableList.addAll(DemandeS.getInstance().showAll());
         ListViewDemande.setItems(demandeObservableList);
-        //ListViewDemande.getStylesheets().add(Routes.HamburgerCss);
+        
         ListViewDemande.setCellFactory(demandeListView -> new DemandeListViewCell(this));
         ListViewDemande.refresh();
     }
