@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="GridPane" style="-fx-background-color: #f7f7f7; -fx-background-radius: 5px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="OffrePane" prefHeight="166.0" prefWidth="486.0" style="-fx-background-color: #f7f7f7;">
+         <children>
+            <JFXButton fx:id="Accepter" blendMode="MULTIPLY" layoutX="370.0" layoutY="127.0" prefHeight="34.0" prefWidth="99.0" style="-fx-background-color: #ffc107; -fx-background-radius: 20px;" text="Accepter" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="17.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="image" fitHeight="95.0" fitWidth="83.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@../../../../../Pictures/Camera%20Roll/nidhal.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="titre" layoutX="99.0" layoutY="19.0" prefHeight="25.0" prefWidth="182.0" text="Maintenace générale" textAlignment="CENTER" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="19.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateFin" layoutX="366.0" layoutY="94.0" prefHeight="17.0" prefWidth="99.0" text="20/11/2019" AnchorPane.rightAnchor="21.0" />
+            <Label layoutX="346.0" layoutY="94.0" text="to" AnchorPane.rightAnchor="129.0" AnchorPane.topAnchor="94.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="budget" layoutX="107.0" layoutY="48.0" prefHeight="17.0" prefWidth="77.0" text="220dt" textAlignment="CENTER" AnchorPane.leftAnchor="107.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateDebut" layoutX="272.0" layoutY="94.0" prefHeight="17.0" prefWidth="65.0" text="20/11/2019" AnchorPane.rightAnchor="149.0" />
+            <Label fx:id="Etat" layoutX="395.0" layoutY="12.0" prefHeight="17.0" prefWidth="65.0" text="Accepté" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="15.0" />
+         </children>
+         <GridPane.margin>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </GridPane.margin>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+   </padding>
+</GridPane>

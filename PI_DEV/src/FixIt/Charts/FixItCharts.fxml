@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="636.0" styleClass="custom-pane" stylesheets="@../StyleSheet/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FixIt.Charts.FixItChartsController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <JFXTabPane fx:id="mainTab" tabMinHeight="45.0" tabMinWidth="50.0">
+         <tabs>
+            <Tab text="Bar Chart">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <BarChart fx:id="BarChart" layoutX="-14.0" layoutY="5.0" prefHeight="377.0" prefWidth="636.0" title="Traffic Charts" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="5.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="XAxis" label="Name" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="YAxis" label="number of posts" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="PieChart">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <PieChart fx:id="PieChart" layoutX="50.0" layoutY="14.0" prefHeight="371.0" prefWidth="500.0" title="Total Traffic Presentation" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="14.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</StackPane>

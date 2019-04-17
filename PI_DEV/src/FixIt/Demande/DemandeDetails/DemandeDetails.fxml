@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="478.0" prefWidth="592.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FixIt.Demande.DemandeDetails.DemandeDetailsController">
+   <children>
+      <ImageView fx:id="DemandeDetailsImg" fitHeight="289.0" fitWidth="196.0" layoutX="14.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+        
+      </ImageView>
+      <Label alignment="CENTER" layoutX="244.0" layoutY="14.0" prefHeight="23.0" prefWidth="242.0" text="Demande Details : " textFill="#ffc107">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="71.0" prefHeight="27.0" prefWidth="76.0" text="Titre">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="titre" contentDisplay="CENTER" layoutX="394.0" layoutY="71.0" prefHeight="27.0" prefWidth="76.0" text="Titre" textFill="#0897ff">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="113.0" prefHeight="27.0" prefWidth="76.0" text="budget">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="budget" layoutX="395.0" layoutY="113.0" prefHeight="27.0" prefWidth="76.0" text="budget" textFill="#0897ff">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="278.0" prefHeight="27.0" prefWidth="103.0" text="Description ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="249.0" layoutY="193.0" prefHeight="27.0" prefWidth="103.0" text="Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="date" layoutX="397.0" layoutY="193.0" prefHeight="27.0" prefWidth="76.0" text="date" textFill="#0897ff">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="237.0" prefHeight="27.0" prefWidth="103.0" text="Client">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="client" layoutX="395.0" layoutY="237.0" prefHeight="27.0" prefWidth="165.0" text="Nidhal Ammar" textFill="#0897ff">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="saveAsPdf" layoutX="396.0" layoutY="413.0" onAction="#ExportToPdf" prefHeight="38.0" prefWidth="165.0" style="-fx-background-color: #ffc107; -fx-background-radius: 10px;" text="Save As PDF" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="251.0" layoutY="155.0" prefHeight="27.0" prefWidth="103.0" text="Categorie">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="categorie" layoutX="396.0" layoutY="155.0" prefHeight="27.0" prefWidth="103.0" text="categorie" textFill="#0897ff">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="description" layoutX="267.0" layoutY="311.0" prefHeight="44.0" prefWidth="325.0" text="Label" textFill="#0897ff">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
