@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ListOffrePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="832.0" style="-fx-background-color: #ffffff;" stylesheets="@../Styles/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OffreListController">
+   <children>
+      <Pane layoutX="554.0" layoutY="218.0" prefHeight="314.0" prefWidth="240.0" styleClass="card-unpadded" AnchorPane.leftAnchor="560.0">
+         <children>
+            <TitledPane prefHeight="314.0" prefWidth="240.0" styleClass="blue-titledPane" stylesheets="@../Styles/styles.css" text="Services">
+               <content>
+                  <JFXListView fx:id="servicelist" focusTraversable="false" prefHeight="280.0" prefWidth="228.0" styleClass="list-cell" />
+               </content>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TitledPane>
+         </children>
+      </Pane>
+      <Pane layoutX="37.0" layoutY="135.0" styleClass="card-unpadded">
+         <children>
+            <TitledPane animated="false" prefHeight="398.0" prefWidth="500.0" styleClass="blue-titledPane" stylesheets="@../Styles/styles.css" text="List des offres">
+               <content>
+                  <JFXListView fx:id="ListOffre" focusTraversable="false" prefHeight="353.0" prefWidth="488.0" styleClass="list-cell" />
+               </content>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TitledPane>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="38.0" layoutY="67.0" prefHeight="59.0" prefWidth="498.0" styleClass="card-unpadded" stylesheets="@../Styles/styles.css">
+         <children>
+            <HBox layoutX="-2.0" prefHeight="59.0" prefWidth="498.0" spacing="20.0">
+               <children>
+                  <AnchorPane prefHeight="69.0" prefWidth="142.0" style="-fx-background-color: rgb(0, 192, 239);">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <ImageView fx:id="proimg" fitHeight="30.0" fitWidth="30.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/pro.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="51.0" layoutY="5.0" prefHeight="28.0" prefWidth="69.0" text="120 Pro" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #ffc107;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <ImageView fx:id="serviceimg" fitHeight="28.0" fitWidth="25.0" layoutX="12.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/service.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="54.0" layoutY="4.0" prefHeight="28.0" prefWidth="84.0" text="7 Services" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #9ACD32;">
+                     <children>
+                        <ImageView fx:id="produitimg" fitHeight="36.0" fitWidth="30.0" layoutX="8.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/produit.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="46.0" layoutY="4.0" prefHeight="28.0" prefWidth="91.0" text="25 Produits" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnadddemande" buttonType="RAISED" layoutX="587.0" layoutY="138.0" prefHeight="59.0" prefWidth="188.0" style="-fx-background-color: #ffc107;" text="Poster une Demande" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="recherchefield" layoutX="586.0" layoutY="84.0" prefHeight="25.0" prefWidth="163.0" promptText="Recherche" />
+      <ImageView fx:id="searchicon" fitHeight="25.0" fitWidth="25.0" layoutX="750.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/recherche.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

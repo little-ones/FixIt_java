@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="832.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AccueilController">
+    <children>
+      <AnchorPane layoutY="13.0" prefWidth="832.0">
+         <children>
+            <JFXToolbar layoutX="11.0" layoutY="48.0" prefHeight="51.0" prefWidth="820.0" styleClass="jfx-toolbar" stylesheets="@../Styles/styles.css">
+               <left>
+                  <JFXHamburger fx:id="humburger" prefHeight="51.0" prefWidth="77.0" styleClass="jfx-hamburger" stylesheets="@../Styles/styles.css" BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <Label prefHeight="32.0" prefWidth="81.0" styleClass="toolbar-label" text="Fix'it" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </center>
+            </JFXToolbar>
+            <Label layoutX="601.0" layoutY="20.0" text="Connecté : M'henni Mohamed Amine" textFill="#5f8cf5">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="logo" fitHeight="43.0" fitWidth="200.0" layoutX="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/D/2eme%20Semestre/PIDEV/handyman-12/handyman/images/logo.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="32.0" layoutY="119.0" prefHeight="79.0" prefWidth="530.0" styleClass="card-unpadded" stylesheets="@../Styles/styles.css">
+               <children>
+                  <HBox layoutX="-2.0" prefHeight="79.0" prefWidth="530.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="69.0" prefWidth="142.0" style="-fx-background-color: rgb(0, 192, 239);">
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fx:id="proimg" fitHeight="39.0" fitWidth="30.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/pro.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="45.0" layoutY="16.0" prefHeight="28.0" prefWidth="69.0" text="120 Pro" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="16.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="40.0" prefWidth="142.0" style="-fx-background-color: #ffc107;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fx:id="serviceimg" fitHeight="36.0" fitWidth="30.0" layoutX="12.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="13.0">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/service.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="56.0" layoutY="15.0" prefHeight="28.0" prefWidth="84.0" text="7 Services" textFill="WHITE" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="15.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="55.0" prefWidth="100.0" style="-fx-background-color: #9ACD32;">
+                           <children>
+                              <ImageView fx:id="produitimg" fitHeight="36.0" fitWidth="30.0" layoutX="8.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="104.0" AnchorPane.topAnchor="13.0">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/produit.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="46.0" layoutY="15.0" prefHeight="28.0" prefWidth="91.0" text="25 Produits" textFill="WHITE" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="15.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="40.0" right="25.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="achropane" layoutX="5.0" layoutY="206.0" prefHeight="347.0" prefWidth="832.0" style="-fx-background-color: ffffff;" styleClass="card-unpadded">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </AnchorPane>
+            <JFXDrawer fx:id="navdrawer" defaultDrawerSize="190.0" overLayVisible="false" prefHeight="453.0" prefWidth="104.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="113.0" />
+            <JFXButton fx:id="btnadddemande" buttonType="RAISED" layoutX="601.0" layoutY="129.0" prefHeight="59.0" prefWidth="188.0" style="-fx-background-color: #ffc107;" text="Poster une Demande" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+    </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

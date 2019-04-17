@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="modifierreservation" prefHeight="471.0" prefWidth="774.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifierReservationController">
+   <children>
+      <JFXToolbar layoutX="6.0" layoutY="11.0" minHeight="37.0" prefHeight="37.0" prefWidth="759.0" styleClass="jfx-toolbar" stylesheets="@../Styles/styles.css" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="11.0">
+         <center>
+            <Label prefHeight="25.0" prefWidth="198.0" text="Modifier une Réservation" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </center>
+      </JFXToolbar>
+      <AnchorPane layoutX="6.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="759.0" styleClass="card-unpadded" stylesheets="@../Styles/styles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="57.0">
+         <children>
+            <ImageView fx:id="handyman" fitHeight="343.0" fitWidth="206.0" layoutX="61.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/D/2eme%20Semestre/PIDEV/handyman-12/handyman/images/slide-img-2.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="305.0" layoutY="43.0" orientation="VERTICAL" prefHeight="343.0" prefWidth="12.0" />
+            <JFXTextField fx:id="prof" layoutX="369.0" layoutY="50.0" prefHeight="29.0" prefWidth="346.0" promptText="Professionnel" />
+            <JFXTextField fx:id="titreoffre" layoutX="369.0" layoutY="111.0" prefHeight="29.0" prefWidth="346.0" promptText="Titre" />
+            <JFXTextField fx:id="budget" layoutX="369.0" layoutY="174.0" prefHeight="29.0" prefWidth="346.0" promptText="Budget" />
+            <JFXDatePicker fx:id="datedebut" layoutX="369.0" layoutY="250.0" prefHeight="29.0" prefWidth="346.0" promptText="Date Début" />
+            <JFXDatePicker fx:id="datefin" layoutX="371.0" layoutY="295.0" prefHeight="29.0" prefWidth="346.0" promptText="Date Fin" />
+            <JFXButton fx:id="btnmodif" layoutX="411.0" layoutY="352.0" prefHeight="37.0" prefWidth="117.0" styleClass="blue-btn" stylesheets="@../Styles/styles.css" text="Modifier" />
+            <JFXButton fx:id="btnannuler" layoutX="557.0" layoutY="353.0" prefHeight="37.0" prefWidth="117.0" styleClass="yellow-btn" stylesheets="@../Styles/styles.css" text="Annuler" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

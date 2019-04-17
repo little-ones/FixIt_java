@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<GridPane fx:id="gridpanepro" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="275.0" prefWidth="822.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <AnchorPane layoutX="24.0" layoutY="11.0">
+               <children>
+                  <Pane layoutX="6.0" layoutY="62.0" prefHeight="188.0" prefWidth="221.0" styleClass="card-unpadded" stylesheets="@../Styles/styles.css">
+                     <children>
+                        <Label fx:id="Namepro" alignment="CENTER" layoutX="7.0" layoutY="50.0" prefHeight="21.0" prefWidth="209.0" text="Ala Younes">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Domaine" alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="78.0" prefHeight="21.0" prefWidth="209.0" text="Domaine Plomberie" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Rating fx:id="rating1" layoutX="19.0" layoutY="111.0" mouseTransparent="true" partialRating="true" prefHeight="32.0" prefWidth="195.0" rating="0.0" updateOnHover="true" />
+                        <JFXButton fx:id="btndetail" layoutX="62.0" layoutY="153.0" prefHeight="27.0" prefWidth="89.0" styleClass="blue-btn" text="Détails" />
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="imgpro" fitHeight="93.0" fitWidth="99.0" layoutX="66.0" layoutY="8.0" pickOnBounds="true" AnchorPane.topAnchor="8.0">
+                     <image>
+                        <Image url="@../../../../../Desktop/D/2eme%20Semestre/PIDEV/handyman-12/handyman/images/gallery-img-2.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="item2" layoutX="275.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="273.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Pane layoutX="23.0" layoutY="62.0" prefHeight="187.0" prefWidth="236.0" styleClass="card-unpadded" stylesheets="@../Styles/styles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="62.0">
+                     <children>
+                        <Label fx:id="Namepro1" alignment="CENTER" layoutX="10.0" layoutY="50.0" prefHeight="21.0" prefWidth="195.0" text="Ala Younes">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Domaine1" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="78.0" prefHeight="21.0" prefWidth="176.0" style="-fx-alignment: center;" text="Domaine Plomberie" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btndetail1" layoutX="59.0" layoutY="149.0" prefHeight="27.0" prefWidth="89.0" styleClass="blue-btn" stylesheets="@../Styles/styles.css" text="Détails" />
+                        <Rating fx:id="rating2" layoutX="16.0" layoutY="107.0" mouseTransparent="true" partialRating="true" rating="0.0" />
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="imgpro1" fitHeight="93.0" fitWidth="99.0" layoutX="81.0" layoutY="8.0" pickOnBounds="true" AnchorPane.bottomAnchor="163.0" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="8.0">
+                     <image>
+                        <Image url="@../../../../../Desktop/D/2eme%20Semestre/PIDEV/handyman-12/handyman/images/gallery-img-2.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="item3" layoutX="549.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="273.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Pane layoutX="23.0" layoutY="62.0" prefHeight="188.0" prefWidth="209.0" styleClass="card-unpadded" stylesheets="@../Styles/styles.css" AnchorPane.topAnchor="62.0">
+                     <children>
+                        <Label fx:id="Namepro2" alignment="CENTER" layoutX="7.0" layoutY="50.0" prefHeight="21.0" prefWidth="195.0" text="Ala Younes">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Domaine2" alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="79.0" prefHeight="21.0" prefWidth="176.0" text="Domaine Plomberie" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btndetail2" layoutX="65.0" layoutY="148.0" prefHeight="27.0" prefWidth="89.0" styleClass="blue-btn" stylesheets="@../Styles/styles.css" text="Détails" />
+                        <Rating fx:id="rating3" layoutX="21.0" layoutY="107.0" mouseTransparent="true" partialRating="true" rating="0.0" />
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="imgpro2" fitHeight="93.0" fitWidth="99.0" layoutX="80.0" layoutY="8.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../../Desktop/D/2eme%20Semestre/PIDEV/handyman-12/handyman/images/gallery-img-2.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

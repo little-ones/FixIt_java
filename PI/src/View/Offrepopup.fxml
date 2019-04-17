@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="Offrepopup" prefHeight="445.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PopupOffreController">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" styleClass="card-unpadded" stylesheets="@../Styles/styles.css">
+         <children>
+            <ImageView fx:id="img" fitHeight="300.0" fitWidth="236.0" layoutX="23.0" layoutY="73.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../Desktop/1521018917.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="273.0" layoutY="66.0" orientation="VERTICAL" prefHeight="342.0" prefWidth="6.0" />
+            <JFXTextField fx:id="titre" editable="false" layoutX="291.0" layoutY="100.0" prefHeight="25.0" prefWidth="280.0" promptText="Titre">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="budget" editable="false" layoutX="291.0" layoutY="149.0" prefHeight="25.0" prefWidth="280.0" promptText="Budget">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="datepublication" editable="false" layoutX="291.0" layoutY="197.0" prefHeight="25.0" prefWidth="280.0" promptText="Date de publication">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextArea fx:id="description" editable="false" layoutX="288.0" layoutY="257.0" prefHeight="137.0" prefWidth="280.0" promptText="Description">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </JFXTextArea>
+            <JFXTextField fx:id="pro" editable="false" layoutX="291.0" layoutY="64.0" prefHeight="25.0" prefWidth="280.0" promptText="Professionnel">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXToolbar layoutY="1.0" prefHeight="38.0" prefWidth="600.0" styleClass="jfx-toolbar">
+               <center>
+                  <Label prefHeight="24.0" prefWidth="175.0" text="Information d'offre" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </center>
+            </JFXToolbar>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

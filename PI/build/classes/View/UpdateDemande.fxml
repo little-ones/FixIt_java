@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ModifierDemande" prefHeight="469.0" prefWidth="772.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifierDemandeController">
+   <children>
+      <JFXToolbar layoutX="6.0" layoutY="11.0" prefHeight="37.0" prefWidth="759.0" style="-fx-background-color: #ffc107;">
+         <center>
+            <Label prefHeight="38.0" prefWidth="205.0" text="Modifier une demande" textFill="#fcfcfc" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+         </center>
+      </JFXToolbar>
+      <AnchorPane layoutX="6.0" layoutY="57.0" prefHeight="400.0" prefWidth="759.0" style="-fx-background-color: #ffffff;" styleClass="card-unpadded" stylesheets="@../Styles/styles.css">
+         <children>
+            <JFXButton fx:id="btnModifier" layoutX="462.0" layoutY="347.0" styleClass="blue-btn" text="Modifier" />
+            <JFXButton fx:id="btnMannuler" layoutX="566.0" layoutY="347.0" styleClass="blue-btn" text="Annuler" />
+            <JFXTextField fx:id="tfMtitre" layoutX="353.0" layoutY="43.0" prefHeight="25.0" prefWidth="385.0" promptText="Titre" />
+            <JFXTextField fx:id="tfMbudget" layoutX="353.0" layoutY="98.0" prefHeight="25.0" prefWidth="385.0" promptText="Budget" />
+            <JFXTextArea fx:id="taMdesc" layoutX="354.0" layoutY="211.0" prefHeight="94.0" prefWidth="385.0" promptText="Description" />
+            <JFXComboBox fx:id="cbMcat" layoutX="353.0" layoutY="159.0" prefHeight="25.0" prefWidth="385.0" promptText="Catégorie" />
+            <ImageView fx:id="imghandy" fitHeight="328.0" fitWidth="267.0" layoutX="54.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../2eme%20Semestre/PIDEV/handyman-12/handyman/images/footer-img.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="305.0" layoutY="46.0" orientation="VERTICAL" prefHeight="303.0" prefWidth="6.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
