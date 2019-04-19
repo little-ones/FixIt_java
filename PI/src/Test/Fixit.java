@@ -34,7 +34,7 @@ public class Fixit extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Handyman");
         
-        parentPage = FXMLLoader.load(getClass().getResource("/View/HomePage.fxml"));
+        parentPage = FXMLLoader.load(getClass().getResource("/View/Login.fxml"));
         
        JFXDecorator decorator = new JFXDecorator(primaryStage, parentPage);
         decorator.setCustomMaximize(false);

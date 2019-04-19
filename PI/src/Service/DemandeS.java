@@ -5,6 +5,8 @@
  */
 package Service;
 
+import Controller.HomePageController;
+import Controller.Login;
 import Entity.Demande;
 import Entity.Pro;
 import Entity.Service;
@@ -118,7 +120,7 @@ public class DemandeS implements Crud<Demande> {
     @Override
     public ArrayList<Demande> showAll() {
         ArrayList<Demande> l = new ArrayList<>();
-        String req = "select * from demande";
+        String req = "select * from demande where user_id="+Login.id;
         Demande d = new Demande();
         try {
             System.out.println("okkkkkkkkkkkkkkkkkkk ");
@@ -135,7 +137,7 @@ public class DemandeS implements Crud<Demande> {
         return l;
     }
 
-    public Pro showpro(int id) {
+    public Pro showuser(int id) {
         String req = "select * from fos_user where id=" + id;
         Pro p = null;
         try {
@@ -199,6 +201,20 @@ public class DemandeS implements Crud<Demande> {
             Logger.getLogger(DemandeS.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+ public void updateuser(Pro d1) {
+        // String req="select * from demande where id="+d1.getId();
+        
+       String query = "update fos_user set nom='" + d1.getNom()
+                + "',prenom='" + d1.getPrenom() + "',adresse='" + d1.getAdresse() + "',image_name='" + d1.getImage_name()
+                + "',password='" + d1.getPassword() +"',telephone='" + d1.getTelephone() + "' where id=" + d1.getId();
+        try {
+            
+            st.executeUpdate(query);
+            System.out.println("rating succues ");
+        } catch (SQLException ex) {
+            Logger.getLogger(DemandeS.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
  public Service showservice(int id) {
         String req = "select * from service where id=" + id;
         Service s = null;
@@ -226,5 +242,37 @@ public class DemandeS implements Crud<Demande> {
             Logger.getLogger(DemandeS.class.getName()).log(Level.SEVERE, null, ex);
         }
         return s;
+    }
+ public Pro showuserByusername(String user,String pwd) {
+        String req = "select * from fos_user where username='" + user+"' and password ='"+pwd+"'";
+        Pro p = null;
+        try {
+            System.out.println("okkkkkkkkkkkkkkkkkkk ");
+            rs = st.executeQuery(req);
+
+            while (rs.next()) {
+                int idpro =rs.getInt(1);
+                String username =rs.getString(2);
+                String email =rs.getString(4);
+                String password =rs.getString(8);
+                String role =rs.getString(12);
+                String nom =rs.getString(13);
+                String prenom =rs.getString(14);
+                String adresse= rs.getString(15);
+                String tel =rs.getString(16);
+                String img =rs.getString(17);
+                Double rating = rs.getDouble(18);
+
+                p = new Pro(idpro,username,email,password,role,nom,prenom,adresse,tel,img,rating);
+                System.out.println(p.toString()+"--------------------");
+                return p;
+            }
+
+            System.out.println("Pro by id ok ");
+        } catch (SQLException ex) {
+            System.out.println("Erreur de chargement de professionels ");
+            Logger.getLogger(DemandeS.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return p;
     }
 }

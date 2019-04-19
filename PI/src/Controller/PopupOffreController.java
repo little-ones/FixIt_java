@@ -64,7 +64,7 @@ public class PopupOffreController implements Initializable{
         budget.setText(o.getBudget()+" TND");
         datepublication.setText(o.getDate()+"");
         description.setText(o.getDescription());
-        pro.setText(DemandeS.getInstance().showpro(o.getPro_id()).getNom());
+        pro.setText(DemandeS.getInstance().showuser(o.getPro_id()).getNom());
         });
     }
     

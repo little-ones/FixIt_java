@@ -19,6 +19,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
@@ -64,6 +65,14 @@ public class MesReservationListView implements Initializable {
             System.out.println("Probleme de chargement des reservations ");
         }
         ArrayList<Service> services = DemandeS.getInstance().showAllServices();
+        Collections.sort(services, new Comparator<Service>() {
+            public int compare(Service o1, Service o2) {
+                if (o1.getDate() == null || o2.getDate() == null) {
+                    return 0;
+                }
+                return o1.getDate().compareTo(o2.getDate());
+            }
+        });
         Collections.reverse(services);
 
         try {

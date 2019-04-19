@@ -14,6 +14,8 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -79,7 +81,7 @@ public class ProfilController implements Initializable {
            Image image = new Image(getClass().getResource("/Image/user.jpg").toExternalForm());
             userimg.setImage(image);
 
-            Pro p = DemandeS.getInstance().showpro(id);
+            Pro p = DemandeS.getInstance().showuser(id);
             System.out.println(p.toString());
             nom.setText("Nom : " + p.getNom());
             prenom.setText("Prenom : " + p.getPrenom());
@@ -87,6 +89,21 @@ public class ProfilController implements Initializable {
             email.setText("Email : " + p.getEmail());
             adresse.setText("Adresse : " + p.getAdresse());
             ratingprofil.setRating(p.getRating());
+            
+            ratingprofil.ratingProperty().addListener(new ChangeListener<Number>() {
+                  
+
+               @Override
+               public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                  Pro p1 = p;
+                        Double r = Double.parseDouble(newValue.toString());
+                        p1.setRating((p1.getRating() + r) / 2);
+                        ratingprofil.setRating(r);
+                        DemandeS.getInstance().updaterating(p1);
+               }
+                });
+            
+            
         });
     }
     public static String saveToFileImageNormal(Image image) throws SQLException, IOException {

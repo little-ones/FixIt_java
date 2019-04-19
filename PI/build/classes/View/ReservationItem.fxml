@@ -20,7 +20,7 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="172.0" prefWidth="487.0">
          <children>
-            <ImageView fitHeight="75.0" fitWidth="108.0" layoutX="21.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="reservationimg" fitHeight="77.0" fitWidth="88.0" layoutX="36.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@templates.png" />
                </image>

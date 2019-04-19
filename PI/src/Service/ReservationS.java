@@ -5,6 +5,8 @@
  */
 package Service;
 
+import Controller.HomePageController;
+import Controller.Login;
 import Entity.Demande;
 import Entity.Reservation;
 import Service.interfaces.Crud;
@@ -107,7 +109,7 @@ public class ReservationS implements Crud<Reservation> {
     @Override
     public ArrayList<Reservation> showAll() {
         ArrayList<Reservation> lr = new ArrayList<>();
-        String req = "select * from reservation ";
+        String req = "select * from reservation where Client_id="+Login.id;
         Reservation d = new Reservation();
         try {
             System.out.println("okkkkkkkkkkkkkkkkkkk ");

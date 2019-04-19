@@ -91,7 +91,7 @@ public class DemandeListViewCell extends ListCell<Demande> {
                     e.printStackTrace();
                 }
             }
-            Image image = new Image(getClass().getResource("/Image/templates.png").toExternalForm());
+            Image image = new Image(getClass().getResource("/Image/Demande.png").toExternalForm());
             demandeimg.setImage(image);
             demandeimg.setClip(new Circle(20, 20, 70));
             titredemande.setText(demande.getTitre());

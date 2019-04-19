@@ -178,7 +178,7 @@ public class Pro {
 
  public String toString()
  {
-     return this.username+" ---------------------------------------------"+this.id;
+     return this.username+" ---------------------------------------------"+this.id+"Imagename:"+this.image_name;
  }
 
     /**

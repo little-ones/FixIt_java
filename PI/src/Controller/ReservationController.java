@@ -7,6 +7,7 @@ package Controller;
 
 import Entity.Demande;
 import Entity.Offre;
+import Entity.Pro;
 import Entity.Reservation;
 import Service.DemandeS;
 import Service.ReservationS;
@@ -75,7 +76,8 @@ public class ReservationController implements Initializable {
         Platform.runLater(() -> {
             Image image = new Image(getClass().getResource("/Image/handyman.png").toExternalForm());
             handyman.setImage(image);
-            prof.setText(offre.getPro_id() + "");
+            Pro p = DemandeS.getInstance().showuser(offre.getPro_id());
+            prof.setText(p.getNom() + "");
             titreoffre.setText(offre.getTitre());
             budget.setText(offre.getBudget() + "");
 
@@ -90,11 +92,12 @@ public class ReservationController implements Initializable {
                         {
                         Reservation r = new Reservation();
                         r.setIdpro(offre.getPro_id());
-                        r.setIdclient(1);
+                        r.setIdclient(Login.id);
                         r.setCategorie(titreoffre.getText());
                         r.setBudget(Float.parseFloat(budget.getText()));
                         r.setDatedebut(Date.valueOf(datedebut.getValue()));
                         r.setDatefin(Date.valueOf(datefin.getValue()));
+                        r.setEtat("En attente");
                         System.out.println("********" + r.toString());
                         ReservationS.getInstance().add(r);
                         showAlertWithoutHeaderText("Demande de réservation bien effecuter");
@@ -103,7 +106,7 @@ public class ReservationController implements Initializable {
                             showAlertWithoutHeaderText("Date invalide");
                         }
                     }else{
-                        showAlertWithoutHeaderText("Le remplissage du champs date obligatoire");
+                        showAlertWithoutHeaderText("Le remplissage du date début et date fin  obligatoire");
                     }
                 } catch (Exception ex) {
                     showAlertWithoutHeaderText("Le Remplissage des champs est obligatoire");

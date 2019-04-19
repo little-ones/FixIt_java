@@ -3,20 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/OffreListController.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/ProfilController.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Service/OffreS.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/ReservationController.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/DemandeListViewCell.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Entity/Offre.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/ProListViewCell.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/MapController.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/ModifierDemandeController.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/ProlistviewController.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Service/ProService.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/AccueilController.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/OffreListViewCell.java</file>
-            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/DemandeListController.java</file>
+            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/View/Login.fxml</file>
+            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/ProfiClientController.java</file>
+            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Entity/Pro.java</file>
+            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Controller/Login.java</file>
+            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Service/DemandeS.java</file>
+            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/View/ProfilClient.fxml</file>
+            <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/View/profil.fxml</file>
             <file>file:/C:/Users/MedAmine/Documents/NetBeansProjects/PI/src/Test/Fixit.java</file>
         </group>
     </open-files>

@@ -17,6 +17,7 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -46,7 +47,7 @@ public class DemandeListController implements Initializable {
     private ObservableList<Demande> demandeObservableList;
     private ObservableList<Service> serviceObservableList;
     @FXML
-    private ListView ListViewDemande;
+    public ListView ListViewDemande;
 
     @FXML
     private ListView servicelist;
@@ -62,11 +63,20 @@ public class DemandeListController implements Initializable {
 
     @FXML
     private ImageView searchicon;
-    ArrayList<Demande> mesdemandes;
+    public  ArrayList<Demande> mesdemandes;
 
     public DemandeListController() {
+        
         ArrayList<Service> services = DemandeS.getInstance().showAllServices();
         mesdemandes = DemandeS.getInstance().showAll();
+        Collections.sort(services, new Comparator<Service>() {
+            public int compare(Service o1, Service o2) {
+                if (o1.getDate() == null || o2.getDate() == null) {
+                    return 0;
+                }
+                return o1.getDate().compareTo(o2.getDate());
+            }
+        });
         Collections.reverse(services);
         try {
 
@@ -86,6 +96,7 @@ public class DemandeListController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        
         Image icon = new Image(getClass().getResource("/Image/recherche.png").toExternalForm());
         searchicon.setImage(icon);
         /*----------------------------------------------------------------*/
@@ -108,7 +119,7 @@ public class DemandeListController implements Initializable {
 
     }
 
-    public void loadData() {
+    public  void loadData() {
         demandeObservableList.clear();
         demandeObservableList.addAll(DemandeS.getInstance().showAll());
         ListViewDemande.setItems(demandeObservableList);

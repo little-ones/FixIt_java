@@ -22,6 +22,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -31,9 +32,10 @@ import javafx.stage.Window;
  *
  * @author MedAmine
  */
-public class ModifierReservationController implements Initializable{
+public class ModifierReservationController implements Initializable {
+
     private static int id;
-  
+
     /**
      * @return the id
      */
@@ -71,7 +73,7 @@ public class ModifierReservationController implements Initializable{
     private JFXButton btnmodif;
 
     @FXML
-    private JFXButton btnannuler;    
+    private JFXButton btnannuler;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -80,26 +82,32 @@ public class ModifierReservationController implements Initializable{
             handyman.setImage(image);
             Reservation r = new Reservation();
             r = ReservationS.getInstance().show(id);
-            Pro p = DemandeS.getInstance().showpro(r.getIdpro());
-            System.err.println(r.toString()+"<-----------------------------");
-            prof.setText(p.getNom()+"");
+            Pro p = DemandeS.getInstance().showuser(r.getIdpro());
+            System.err.println(r.toString() + "<-----------------------------");
+            prof.setText(p.getNom() + "");
             titreoffre.setText(r.getCategorie());
             datedebut.setValue(r.getDatedebut().toLocalDate());
             datefin.setValue(r.getDatefin().toLocalDate());
-            budget.setText(r.getBudget()+"");
+            budget.setText(r.getBudget() + "");
             btnmodif.setOnAction((event) -> {
                 try {
-                    Reservation r1 = new Reservation();
-                    r1.setId(id);
-                    r1.setCategorie(titreoffre.getText());
-                    r1.setDatedebut( Date.valueOf(datedebut.getValue()));
-                    r1.setDatefin( Date.valueOf(datefin.getValue()));
-                    r1.setBudget(Float.parseFloat(budget.getText()));
-                    
-                   
-                    System.out.println("********" + r1.toString());
-                    ReservationS.getInstance().update(r1);
-                                     
+                    if ((datedebut.getValue() != null && datefin.getValue() != null)) {
+                        if (((datedebut.getValue().compareTo(datefin.getValue())) <= 0) && (datedebut.getValue().compareTo(Date.valueOf(LocalDate.now()).toLocalDate()) >= 0)) {
+                            Reservation r1 = new Reservation();
+                            r1.setId(id);
+                            r1.setCategorie(titreoffre.getText());
+                            r1.setDatedebut(Date.valueOf(datedebut.getValue()));
+                            r1.setDatefin(Date.valueOf(datefin.getValue()));
+                            r1.setBudget(Float.parseFloat(budget.getText()));
+
+                            System.out.println("********" + r1.toString());
+                            ReservationS.getInstance().update(r1);
+                        }else{
+                            showAlertWithoutHeaderText("Date invalide");
+                        }
+                    }else{
+                        showAlertWithoutHeaderText("Le remplissage du date début et date fin  obligatoire");
+                    }
                 } catch (Exception ex) {
                     System.out.println("Probleme de modification d'une reservation");
                     ex.printStackTrace();
@@ -107,12 +115,22 @@ public class ModifierReservationController implements Initializable{
             });
 
         });
-         btnannuler.setOnAction(new EventHandler<ActionEvent>() {
+        btnannuler.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 Window stage = modifierreservation.getScene().getWindow();
                 stage.hide();
             }
         });
+    }
+    private void showAlertWithoutHeaderText(String text) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information");
+
+        // Header Text: null
+        alert.setHeaderText(null);
+        alert.setContentText(text);
+
+        alert.showAndWait();
     }
 }

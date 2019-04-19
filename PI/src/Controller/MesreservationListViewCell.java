@@ -25,6 +25,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -54,7 +55,10 @@ public class MesreservationListViewCell extends ListCell<Reservation> {
 
     @FXML
     private Label datedebutfin;
-
+    @FXML
+    private ImageView reservationimg;
+    @FXML
+    private Label etat;
     private FXMLLoader mLLoader;
 
     public MesreservationListViewCell(MesReservationListView controllerd) {
@@ -64,14 +68,15 @@ public class MesreservationListViewCell extends ListCell<Reservation> {
     MesreservationListViewCell() {
 
     }
-public void refresh()
-{
-    this.controllerd.loadDataReservation();
-}
+
+    public void refresh() {
+        this.controllerd.loadDataReservation();
+    }
+
     @Override
     protected void updateItem(Reservation reservation, boolean empty) {
         super.updateItem(reservation, empty);
-        
+
         if (empty || reservation == null) {
 
             setText(null);
@@ -122,18 +127,22 @@ public void refresh()
                         stage.setScene(scene);
                         stage.show();
                         stage.setOnHiding((f) -> {
-                           refresh();
+                            refresh();
 
                             stage.close();
                         });
-                        
+
                     } catch (IOException ex) {
                         System.out.println("Chargement ModifierReservation impossible");
                     }
                 }
             });
-            Pro p = DemandeS.getInstance().showpro(reservation.getIdpro());
+            Image imageoffre = new Image(getClass().getResource("/Image/mesreservation.png").toExternalForm());
+            reservationimg.setImage(imageoffre);
+            
+            Pro p = DemandeS.getInstance().showuser(reservation.getIdpro());
             pro.setText(p.getNom());
+            etat.setText(reservation.getEtat());
             categoriprix.setText(reservation.getCategorie() + " " + reservation.getBudget() + " TND");
             datedebutfin.setText("de " + reservation.getDatedebut() + " jusqu'a " + reservation.getDatefin());
             setText(null);

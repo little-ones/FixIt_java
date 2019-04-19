@@ -20,7 +20,7 @@
             <Font name="Arial Bold" size="13.0" />
          </font>
       </Label>
-      <JFXTabPane fx:id="menubar" layoutY="96.0" prefHeight="471.0" prefWidth="832.0" stylesheets="@../Styles/styles.css" tabMinHeight="50.0" tabMinWidth="135.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="96.0">
+      <JFXTabPane fx:id="menubar" layoutY="96.0" onMouseClicked="#Reload" prefHeight="471.0" prefWidth="832.0" stylesheets="@../Styles/styles.css" tabMinHeight="50.0" tabMinWidth="135.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="96.0">
          <tabs>
             <Tab fx:id="Accueiltab" closable="false" text="Accueil">
               <content>
@@ -38,6 +38,11 @@
               </content>
             </Tab>
             <Tab fx:id="professionnelstab" text="Proffessionnels">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab fx:id="profiltab" text="Profil">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>

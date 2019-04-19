@@ -20,7 +20,7 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.0" prefWidth="460.0">
          <children>
-            <ImageView fitHeight="67.0" fitWidth="75.0" layoutX="23.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="offreimg" fitHeight="67.0" fitWidth="75.0" layoutX="23.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@templates.png" />
                </image>
@@ -34,7 +34,7 @@
                   <Image url="@../../../../../Desktop/images.png" />
                </image>
             </ImageView>
-            <Label fx:id="Categorie" layoutX="121.0" layoutY="46.0" prefHeight="17.0" prefWidth="198.0" text="Maintenance et sécurité  : 150dt">
+            <Label fx:id="Categorie" layoutX="121.0" layoutY="46.0" prefHeight="17.0" prefWidth="305.0" text="Maintenance et sécurité  : 150dt">
                <font>
                   <Font name="Arial Bold" size="13.0" />
                </font></Label>

@@ -53,7 +53,8 @@ public class OffreListViewCell extends ListCell<Offre> {
     private GridPane gridpaneoffre;
     @FXML
     private ImageView icreserver;
-
+        @FXML
+    private ImageView offreimg;
     @Override
     protected void updateItem(Offre offre, boolean empty) {
         super.updateItem(offre, empty);
@@ -97,9 +98,11 @@ public class OffreListViewCell extends ListCell<Offre> {
                     System.out.println("Chargement UpdateDemande impossible");
                 }
             });
+            Image imageoffre = new Image(getClass().getResource("/Image/offre.png").toExternalForm());
+            offreimg.setImage(imageoffre);
             Image image = new Image(getClass().getResource("/Image/reservation.png").toExternalForm());
             icreserver.setImage(image);
-            Pro p = DemandeS.getInstance().showpro(offre.getPro_id());
+            Pro p = DemandeS.getInstance().showuser(offre.getPro_id());
             ProNom.setText(p.getNom());
             Categorie.setText(offre.getTitre() + " " + offre.getBudget() + "TND");
             etat.setText("Disponible");
